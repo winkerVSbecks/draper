@@ -1,0 +1,43 @@
+{
+  "name": "Draper",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "dev": "npm run dev:ios",
+    "dev:ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "dev:android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "test:watch": "ava --watch",
+    "test": "ava"
+  },
+  "ava": {
+    "babel": "inherit",
+    "files": [
+      "src/**/*.spec.js",
+      "!test/entry.js"
+    ],
+    "require": [
+      "babel-register",
+      "babel-polyfill",
+      "react-native-mock/mock",
+      "./test/entry.js"
+    ]
+  },
+  "dependencies": {
+    "ramda": "^0.21.0",
+    "react": "^15.2.1",
+    "react-native": "^0.30.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-react-native": "^1.9.0",
+    "eslint": "^3.2.0",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-react": "^5.2.2",
+    "eslint-plugin-react-native": "^1.2.0",
+    "react-native-mock": "^0.2.6"
+  }
+}
