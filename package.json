@@ -1,6 +1,6 @@
 {
   "name": "Draper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -41,8 +41,8 @@
     "react-native-mock": "^0.2.6"
   },
   "author": {
-    "name" : "Varun Vachhar",
-    "url" : "http://varun.ca"
+    "name": "Varun Vachhar",
+    "url": "http://varun.ca"
   },
   "license": "MIT",
   "keywords": [
