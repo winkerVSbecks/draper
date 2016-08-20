@@ -1,7 +1,7 @@
 {
   "name": "Draper",
-  "version": "0.0.1",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "dev": "npm run dev:ios",
@@ -13,7 +13,7 @@
   "ava": {
     "babel": "inherit",
     "files": [
-      "src/**/*.spec.js",
+      "lib/**/*.spec.js",
       "!test/entry.js"
     ],
     "require": [
@@ -24,9 +24,7 @@
     ]
   },
   "dependencies": {
-    "ramda": "^0.21.0",
-    "react": "^15.2.1",
-    "react-native": "^0.30.0"
+    "ramda": "0.21.0"
   },
   "devDependencies": {
     "ava": "^0.16.0",
@@ -38,6 +36,29 @@
     "eslint-loader": "^1.5.0",
     "eslint-plugin-react": "^5.2.2",
     "eslint-plugin-react-native": "^1.2.0",
+    "react": "^15.2.1",
+    "react-native": "^0.30.0",
     "react-native-mock": "^0.2.6"
-  }
+  },
+  "author": {
+    "name" : "Varun Vachhar",
+    "url" : "http://varun.ca"
+  },
+  "license": "MIT",
+  "keywords": [
+    "atomic",
+    "functional",
+    "modular",
+    "styles",
+    "react native",
+    "draper"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/winkerVSbecks/draper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/winkerVSbecks/draper/issues"
+  },
+  "homepage": "https://github.com/winkerVSbecks/draper"
 }

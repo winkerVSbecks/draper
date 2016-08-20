@@ -1,15 +1,17 @@
 # Draper [![](https://circleci.com/gh/winkerVSbecks/draper/tree/master.svg?style=shield)](https://circleci.com/gh/winkerVSbecks/draper)
 
-Immutable utility style, atomic and modular styling for React Native. Inspired by [Tachyons](http://tachyons.io), [Basscss](http://www.basscss.com) and [react-native-style-tachyons](https://github.com/tachyons-css/react-native-style-tachyons).
+Atomic, functional and modular styling for React Native. Inspired by Basscss and Tachyons.
 
 <image alt="Don Draper smile" src="draper.gif" width="250">
 
 ### Usage
 
-Build styles in a `styles.js` module:
+`npm i Draper -S`
+
+Build draper styles in a `styles.js` module:
 
 ```js
-import draper from '../src';
+import draper from 'Draper';
 export default draper();
 ```
 
@@ -25,7 +27,7 @@ import s from './styles';
 
 #### Customizing
 
-The [base config](https://github.com/winkerVSbecks/draper/blob/master/src/config.js) contains defaults for `rem`, `borderWidth`, `typeScale`, `(whitespace)scale`, `lineHeightScale` and `clrs`. You can extend/modify/overwrite these by passing in `options` to the build function. For example:
+The [base config](https://github.com/winkerVSbecks/draper/blob/master/src/config.js) contains defaults for `rem`, `borderWidth`, `typeScale`, `(whitespace)scale`, `lineHeightScale` and `clrs`. You can modify these by passing in `options` to the build function. For example:
 
 ```js
 import draper from '../src';
@@ -82,7 +84,7 @@ These entire flexbox module as utilities.
 
 
 #### Typography
-Font style, weight and Size utilities. Font weight: `normal, bold, 100 - 900`. Font sizes are generated using a type scale.
+Font style, weight and size utilities. Font weight: `normal, bold, 100 - 900`. Font sizes are generated using a type scale.
 
 ```js
 const typeScale = {
@@ -96,6 +98,7 @@ const typeScale = {
 ```
 📑[source](https://github.com/winkerVSbecks/draper/blob/master/src/typography.js)
 
+In React Native `lineHeight` is not a multiplier. This makes it hard to create line height utilities. Instead you can create text components which have all the `fontSize` and `lineHeight` stylings. See [text.js](https://github.com/winkerVSbecks/draper/blob/master/example/flexbox.js) for an example.
 
 #### Whitespace
 Margin and padding utilities.
@@ -116,3 +119,15 @@ Example:
 	ph1 = paddingHorizontal: 4 * rem
 ```
 📑[source](https://github.com/winkerVSbecks/draper/blob/master/src/whitespace.js)
+
+### Example
+To run the example:
+- `npm install`
+- `npm run dev:ios` for iOS and `npm run dev:android` for Android.
+
+
+### Credits
+
+- [Tachyons](http://tachyons.io)
+- [Basscss](http://www.basscss.com)
+- [react-native-style-tachyons](https://github.com/tachyons-css/react-native-style-tachyons)
