@@ -20,7 +20,7 @@ Then to use them:
 ```js
 import s from './styles';
 
-<View style={[ s.bgWhite, s.p2, s.shadow, s.rounded ]}>
+<View style={[ s.bgWhite, s.p2, s.mt2, s.rounded ]}>
   { ... }
 </View>
 ```
