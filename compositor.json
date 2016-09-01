@@ -71,7 +71,8 @@
           "repo": "draper"
         }
       ],
-      "text": "v1.0.1"
+      "text": "v1.0.1",
+      "backgroundImage": "https://github.com/winkerVSbecks/draper/raw/master/draper.gif"
     },
     {
       "component": "article",
