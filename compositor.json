@@ -58,7 +58,7 @@
     {
       "component": "header",
       "heading": "draper",
-      "subhead": "🍸 React Native style utilities",
+      "subhead": "React Native style utilities",
       "children": [
         {
           "component": "ui/TweetButton",
