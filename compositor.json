@@ -1,0 +1,95 @@
+{
+  "name": "winkerVSbecks/draper",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.19"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Brutalist",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BasicHeader",
+      "article": "article/MarkdownArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace",
+    "heading": {},
+    "typeScale": [
+      48,
+      32,
+      20,
+      18,
+      16,
+      14,
+      12
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "fluid": true
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/winkerVSbecks/draper",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/Draper",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "draper",
+      "subhead": "🍸 React Native style utilities",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "draper: 🍸 React Native style utilities",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "winkerVSbecks",
+          "repo": "draper"
+        }
+      ],
+      "text": "v1.0.1"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<p>Atomic, functional and modular styling for React Native. Inspired by Basscss and Tachyons.</p>\n\n\n<h3>Usage</h3>\n<p><code>npm i Draper -S</code></p>\n<p>Build draper styles in a <code>styles.js</code> module:</p>\n<pre><span class=\"hljs-keyword\">import</span> draper <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;Draper&apos;</span>;\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> draper();</pre><p>Then to use them:</p>\n<pre><span class=\"hljs-keyword\">import</span> s <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;./styles&apos;</span>;\n\n<span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">View</span> <span class=\"hljs-attr\">style</span>=<span class=\"hljs-string\">{[</span> <span class=\"hljs-attr\">s.bgWhite</span>, <span class=\"hljs-attr\">s.p2</span>, <span class=\"hljs-attr\">s.mt2</span>, <span class=\"hljs-attr\">s.rounded</span> ]}&gt;</span>\n  { ... }\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">View</span>&gt;</span></span></pre><h4>Customizing</h4>\n<p>The <a href=\"https://github.com/winkerVSbecks/draper/blob/master/src/config.js\">base config</a> contains defaults for <code>rem</code>, <code>borderWidth</code>, <code>typeScale</code>, <code>(whitespace)scale</code>, <code>lineHeightScale</code> and <code>clrs</code>. You can modify these by passing in <code>options</code> to the build function. For example:</p>\n<pre><span class=\"hljs-keyword\">import</span> draper <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;../src&apos;</span>;\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> draper({\n  clrs: { mauve: <span class=\"hljs-string\">&apos;#E0B0FF&apos;</span> },\n  scale: [<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">4</span>],\n  typeScale: {\n    f2: <span class=\"hljs-number\">1.5</span>,\n    f3: <span class=\"hljs-number\">1.25</span>,\n  },\n});</pre><h3>Modules</h3>\n<h4>Absolute</h4>\n<p>Absolute positioning and <code>zIndex</code> utilities. It also aliases <code>StyleSheet.absoluteFill</code>.</p>\n<p>&#x1F4D1;<a href=\"https://github.com/winkerVSbecks/draper/blob/master/src/absolute.js\">source</a></p>\n<h4>Border</h4>\n<p>Border radius and sizing utilities. Border radius scale: <code>1rem, 2rem, 3rem, 4rem, 8rem, 16rem</code>. Border sizing supports three options:</p>\n<ul>\n<li><code>0</code></li>\n<li><code>StyleSheet.hairlineWidth</code></li>\n<li><code>config.borderWidth</code></li>\n</ul>\n<p>&#x1F4D1;<a href=\"https://github.com/winkerVSbecks/draper/blob/master/src/border.js\">source</a></p>\n<h4>Colors</h4>\n<p>Text, border and background colour utilities. The colour values used in this module are from <a href=\"http://clrs.cc\">mrmrs/colors</a>. For example:</p>\n<pre>{ black:        { color: <span class=\"hljs-string\">&apos;#515163&apos;</span> } }\n{ bgBlack:      { backgroundColor: <span class=\"hljs-string\">&apos;#515163&apos;</span> } }\n{ borderBlack:  { borderColor: <span class=\"hljs-string\">&apos;#515163&apos;</span> } }</pre><p>&#x1F4D1;<a href=\"https://github.com/winkerVSbecks/draper/blob/master/src/colors.js\">source</a></p>\n<h4>Dimensions</h4>\n<p>Width and height utilities using this scale: <code>1rem, 2rem, 3rem, 4rem, 8rem, 16rem</code>.</p>\n<p>&#x1F4D1;<a href=\"https://github.com/winkerVSbecks/draper/blob/master/src/dimensions.js\">source</a></p>\n<h4>Flexbox</h4>\n<p>These entire flexbox module as utilities.</p>\n<p>&#x1F4D1;<a href=\"https://github.com/winkerVSbecks/draper/blob/master/src/flexbox.js\">source</a></p>\n<h4>Typography</h4>\n<p>Font style, weight and size utilities. Font weight: <code>normal, bold, 100 - 900</code>. Font sizes are generated using a type scale.</p>\n<pre><span class=\"hljs-keyword\">const</span> typeScale = {\n  f1: <span class=\"hljs-number\">2</span>, <span class=\"hljs-comment\">// * rem</span>\n  f2: <span class=\"hljs-number\">1.5</span>, <span class=\"hljs-comment\">// * rem</span>\n  f3: <span class=\"hljs-number\">1.25</span>, <span class=\"hljs-comment\">// * rem</span>\n  f4: <span class=\"hljs-number\">1</span>, <span class=\"hljs-comment\">// * rem</span>\n  f5: <span class=\"hljs-number\">0.875</span>, <span class=\"hljs-comment\">// * rem</span>\n  f6: <span class=\"hljs-number\">0.75</span>, <span class=\"hljs-comment\">// * rem</span>\n};</pre><p>&#x1F4D1;<a href=\"https://github.com/winkerVSbecks/draper/blob/master/src/typography.js\">source</a></p>\n<p>In React Native <code>lineHeight</code> is not a multiplier. This makes it hard to create line height utilities. Instead you can create text components which have all the <code>fontSize</code> and <code>lineHeight</code> stylings. See <a href=\"https://github.com/winkerVSbecks/draper/blob/master/example/flexbox.js\">text.js</a> for an example.</p>\n<h4>Whitespace</h4>\n<p>Margin and padding utilities.</p>\n<pre>Padding\n<span class=\"hljs-symbol\">    base:</span> p\n<span class=\"hljs-symbol\">    modifiers:</span> h, v, t, r, b, l\n<span class=\"hljs-symbol\">    scale:</span> <span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">6</span>\n\nMargin\n<span class=\"hljs-symbol\">    base:</span> m\n<span class=\"hljs-symbol\">    modifiers:</span> h, v, t, r, b, l\n<span class=\"hljs-symbol\">    scale:</span> <span class=\"hljs-number\">0</span>, <span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">4</span>, <span class=\"hljs-number\">5</span>, <span class=\"hljs-number\">6</span>\n<span class=\"hljs-symbol\">\nExample:</span>\n    mb1 = marginBottom: <span class=\"hljs-number\">0.5</span> * rem\n    ph1 = paddingHorizontal: <span class=\"hljs-number\">4</span> * rem</pre><p>&#x1F4D1;<a href=\"https://github.com/winkerVSbecks/draper/blob/master/src/whitespace.js\">source</a></p>\n<h3>Example</h3>\n<p>To run the example:</p>\n<ul>\n<li><code>npm install</code></li>\n<li><code>npm run dev:ios</code> for iOS and <code>npm run dev:android</code> for Android.</li>\n</ul>\n<h3>Credits</h3>\n<ul>\n<li><a href=\"http://tachyons.io\">Tachyons</a></li>\n<li><a href=\"http://www.basscss.com\">Basscss</a></li>\n<li><a href=\"https://github.com/tachyons-css/react-native-style-tachyons\">react-native-style-tachyons</a></li>\n</ul>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/winkerVSbecks/draper",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/winkerVSbecks",
+          "text": "winkerVSbecks"
+        }
+      ]
+    }
+  ]
+}
