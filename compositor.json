@@ -7,27 +7,24 @@
   "title": "",
   "branch": "",
   "style": {
-    "name": "Brutalist",
+    "name": "Future",
     "componentSet": {
       "nav": "nav/BasicNav",
-      "header": "header/BasicHeader",
-      "article": "article/MarkdownArticle",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
       "footer": "footer/BasicFooter"
     },
-    "fontFamily": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace",
-    "heading": {},
-    "typeScale": [
-      48,
-      32,
-      20,
-      18,
-      16,
-      14,
-      12
-    ],
-    "layout": {
-      "maxWidth": 1024,
-      "fluid": true
+    "fontFamily": "\"Avenir Next\", Helvetica, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "textTransform": "uppercase",
+      "letterSpacing": "0.2em"
+    },
+    "alternativeText": {
+      "textTransform": "uppercase",
+      "fontWeight": 400,
+      "letterSpacing": "0.2em",
+      "opacity": 0.75
     },
     "colors": {
       "text": "#333",
@@ -37,6 +34,11 @@
       "highlight": "#1f80ff",
       "muted": "#f6f6f6",
       "border": "#eee"
+    },
+    "layout": {
+      "centered": true,
+      "maxWidth": 1024,
+      "bannerHeight": "80vh"
     }
   },
   "content": [
